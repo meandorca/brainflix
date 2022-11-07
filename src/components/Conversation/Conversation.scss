@@ -1,0 +1,64 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.conversation {
+    &__form {
+        display: flex;
+        border-bottom: 2px solid #E1E1E1;
+        margin: 0rem 1.5rem;
+    }
+
+    &__circle {
+        height: 3rem;
+        border-radius: 50%;
+        width: 3rem;
+    }
+
+    &__label {
+        color: #AFAFAF;
+        font-weight: 400;
+        font-size: .9rem;
+
+        &--comment {
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+            resize: none;
+            width: -webkit-fill-available;
+            padding-top: 0.5rem;
+            padding-bottom: 4rem;
+            padding-left: .5rem;
+            border: 2px solid #E1E1E1;
+            background-color: #FAFAFA;
+            font-size: 1rem;
+            border-radius: .3rem;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1rem;
+    }
+
+    &__button {
+        border-radius: .2rem;
+        background-color: #0095FF;
+        padding: .5rem .5rem .5rem .5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__plus {
+        height: 1.4rem;
+    }
+
+    &__btext {
+        border: none;
+        background: none;
+        color: white;
+        margin-left: 5rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}

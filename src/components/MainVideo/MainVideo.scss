@@ -1,0 +1,53 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.mainVid {
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &__media {
+        width: -webkit-fill-available;
+        margin-left: -1rem;
+        margin-right: -1rem;
+
+        &--details {
+            border-top: 2px solid #E1E1E1;
+            border-bottom: 2px solid #E1E1E1;
+            color: #AFAFAF;
+        }
+
+        &--channel {
+            color: black;
+            font-weight: 700;
+        }
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &--item1 {
+            display: flex;
+        }
+
+    }
+
+    &__title {
+        font-size: 2rem;
+        width: 20rem;
+        font-weight: 400;
+
+    }
+
+    &__description {
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+
+    &__comments {
+        font-weight: 700;
+    }
+}

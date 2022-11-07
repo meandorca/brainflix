@@ -1,0 +1,33 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.next{
+    margin-left: 1.5rem;
+    
+
+    &__content{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+        color: #AFAFAF;
+        font-weight: 400;
+    }
+
+    &__details{
+        margin-top: -.5rem;
+        margin-left: 1rem;
+
+        &--name{
+            font-weight: 700;
+        }
+    }
+
+    &__img{
+        max-height: 5rem;
+        min-width: 9rem;
+        border-radius: .5rem;
+    }
+}
