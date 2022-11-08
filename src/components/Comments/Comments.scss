@@ -1,0 +1,59 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.comments {
+    margin-bottom: 1.3rem;
+
+    @include desktop {
+        width: auto
+    }
+
+    &__circle {
+        background-color: #AFAFAF;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+
+
+    }
+
+    &__comment {
+        display: flex;
+        margin-left: 4.2rem;
+        font-size: 17px;
+        margin-top: -0.2rem;
+        line-height: 1.5rem;
+    }
+
+
+    &__date {
+        color: #AFAFAF;
+    }
+
+    &__box {
+        border-bottom: 2px solid #E1E1E1;
+        margin: 1.3rem 1.3rem 0rem 1.3rem;
+    }
+
+    &__sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 16.5px;
+    }
+
+    &__info {
+        margin-top: -3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    &__name {
+        margin-left: 4.3rem;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,109 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.conversation {
+    &__form {
+        display: flex;
+        border-bottom: 2px solid #E1E1E1;
+        margin: 0rem 1.5rem;
+
+        @include tablet {
+            margin-top: 2rem;
+            padding-bottom: .5rem;
+        }
+    }
+
+    &__circle {
+        height: 3rem;
+        border-radius: 50%;
+        width: 3rem;
+
+        @include tablet {
+            margin-top: 2rem;
+            margin-right: .7rem;
+        }
+    }
+
+    &__label {
+        color: #AFAFAF;
+        font-weight: 400;
+        font-size: .9rem;
+
+
+        &--comment {
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+            resize: none;
+            width: -webkit-fill-available;
+            padding-top: 0.5rem;
+            padding-bottom: 4rem;
+            padding-left: .5rem;
+            border: 2px solid #E1E1E1;
+            background-color: #FAFAFA;
+            font-size: 1rem;
+            border-radius: .3rem;
+
+            @include tablet {
+                padding-bottom: 0;
+                margin-right: 2rem;
+                height: 2rem;
+                padding-right: 15rem;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1rem;
+        width: 75%
+    }
+
+    &__details {
+        @include tablet {
+            width: auto;
+        }
+
+        &--comment {
+            @include tablet {
+                display: flex;
+                margin-right: 2rem;
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    &__button {
+        border-radius: .2rem;
+        background-color: #0095FF;
+        padding: .5rem .5rem .5rem .5rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            height: 1.6rem;
+            margin-top: 0.6rem;
+            width: 60%;
+        }
+
+    }
+
+    &__plus {
+        height: 1.4rem;
+
+        @include tablet {
+            margin-right: -3rem;
+        }
+    }
+
+
+    &__btext {
+        border: none;
+        background: none;
+        color: white;
+        margin-left: 5rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}

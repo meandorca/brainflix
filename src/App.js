@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './components/Header/Header';
+import MainVideo from './components/MainVideo/MainVideo';
+import Conversation from './components/Conversation/Conversation';
+import Next from './components/Next/Next';
+import Comments from './components/Comments/Comments';
+import button from './assets/Icons/upload.svg'
+import videoDetails from './Data/video-details.json'
+import { useState } from 'react';
+
 
 function App() {
+  const [video, setVideo] = useState(videoDetails[0]);
+
+  const timeConvert = (time) => {
+  return new Intl.DateTimeFormat('en-US').format(time)
+  }
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app"> 
+    <Header/>
+    <MainVideo video= {video} timeConvert={timeConvert} />
+    <div className='app__content'>
+      <div className='app__words'>
+    <Conversation/>
+    <Comments video= {video} timeConvert={timeConvert}/>
     </div>
+    <Next video= {video} setVideo={setVideo} videoDetails={videoDetails}/>
+      </div>
+    </div >
   );
 }
 
+
+
 export default App;
+
