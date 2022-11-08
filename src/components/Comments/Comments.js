@@ -1,8 +1,8 @@
 import './Comments.scss'
 
-function Comments({video,timeConvert}){
-    return(
-        <>
+function Comments({ video, timeConvert }) {
+  return (
+    <>
       <div className="comments">
         {video.comments.map(displayComm =>
 
@@ -19,8 +19,8 @@ function Comments({video,timeConvert}){
         )
         }
       </div>
-        </>
-    )
+    </>
+  )
 }
 
 export default Comments

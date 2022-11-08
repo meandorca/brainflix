@@ -22,10 +22,13 @@ function App() {
     <div className="app"> 
     <Header/>
     <MainVideo video= {video} timeConvert={timeConvert} />
+    <div className='app__content'>
+      <div className='app__words'>
     <Conversation/>
     <Comments video= {video} timeConvert={timeConvert}/>
+    </div>
     <Next video= {video} setVideo={setVideo} videoDetails={videoDetails}/>
-      
+      </div>
     </div >
   );
 }

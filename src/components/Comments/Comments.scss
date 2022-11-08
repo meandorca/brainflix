@@ -5,13 +5,8 @@
 .comments {
     margin-bottom: 1.3rem;
 
-    @include tablet {
-        margin: 0 4rem 1.3rem 4rem;
-    }
-
     @include desktop {
-        width: 50%;
-        margin: auto;
+        width: auto
     }
 
     &__circle {

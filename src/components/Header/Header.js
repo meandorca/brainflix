@@ -5,9 +5,9 @@ import upArrow from '../../assets/Icons/upload.svg'
 import circle from '../../assets/Images/Mohan-muruge.jpg'
 
 function Header() {
-return (
+  return (
     <>
-    <header className="header">
+      <header className="header">
         <img className="header__img" src={logo} />
         <div className='header__info'>
           <div className='header__info--sum'>
@@ -22,9 +22,10 @@ return (
             <button className='header__upload'>UPLOAD</button>
           </div>
         </div>
+        <img className="header__circle--addon" src={circle} />
       </header>
     </>
-)
+  )
 }
 
 export default Header
