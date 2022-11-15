@@ -5,12 +5,15 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    border-bottom: 2px solid #E1E1E1;
+   
 
     @include tablet {
         display: flex;
         flex-direction: row;
+        
     }
 
     &__img {
@@ -23,10 +26,13 @@
             margin-left: 1rem;
         }
 
+        @include desktop {
+            margin-left:6rem;
+        }
+
     }
 
     &__mag {
-        padding-left: 0.7rem;
         padding-top: 0.6rem;
         height: 1.3rem;
     }
@@ -34,18 +40,26 @@
     &__info {
         display: flex;
         margin: 0rem 1.2rem;
+        width: -webkit-fill-available;
 
         @include tablet {
             margin-left: 5rem;
         }
 
+        @include desktop {
+            margin-left: 12%;
+        }
+
         &--sum {
-            width: 80%;
+            width: 78%;
             height: 2.5rem;
             margin-left: .5rem;
             border-radius: 0.3rem;
+            padding-left: 1.2rem;
             border: 2px solid #E1E1E1;
             background-color: #FAFAFA;
+            display: flex;
+            position: relative;
 
             @include tablet {
                 margin-top: 1.2rem;
@@ -67,15 +81,17 @@
         border: none;
         border-radius: .5rem;
         margin-bottom: 1rem;
+        width: -webkit-fill-available;
 
         @include tablet {
-            width: 24%;
+            width: 60%;
             margin: 1.16rem 0 0.5rem 0;
+            margin-top: 1.5rem;
             height: .8rem;
         }
 
         @include desktop {
-            width: 12%;
+            width: 30%;
         }
 
         &--details {
@@ -89,7 +105,8 @@
         color: white;
         background: none;
         border: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        margin-top: 0.1rem;
     }
 
     &__circle {
@@ -112,6 +129,10 @@
                 width: 3rem;
                 margin-left: 1rem;
                 margin-top: 1rem;
+            }
+
+            @include desktop {
+                margin-right:6rem;
             }
 
         }
