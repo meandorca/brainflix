@@ -1,13 +1,13 @@
 import './Next.scss'
-import videoSum from '../../Data/videos.json'
 import { NavLink, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
 function Next({ video, setVideo, videoDetails }) {
 
+  
   let videoid = useParams().MainVideo || videoDetails[0].id;
-
-  const filterNext = videoSum.filter(videoNext => videoid != video.id)
+  console.log(video)
+  const filterNext = videoDetails.filter(videoNext => videoNext.id != video.id)
 
   
 
@@ -16,7 +16,7 @@ function Next({ video, setVideo, videoDetails }) {
     <>
       <div className="next">
         <p className='next__title'>NEXT VIDEOS</p>
-        {videoDetails.map(displaySum =>
+        {filterNext.map(displaySum =>
         <NavLink  to={'/'+displaySum.id}>
           <div  className='next__content'>
             <img className='next__img' src={displaySum.image} />
