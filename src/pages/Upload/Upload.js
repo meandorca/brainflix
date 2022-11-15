@@ -7,21 +7,8 @@ function Upload() {
 
     const navigate = useNavigate();
     const navigateHome = () => {
+        alert("Uploaded!")
         navigate('/');
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(event.target);
-
-        const form = event.target;
-        const title = form.title.value;
-        const description = form.description.value
-
-        if (title === "" || description === "") {
-            alert("Uploaded!")
-            return;
-        }
     };
 
 
@@ -36,7 +23,7 @@ function Upload() {
                 </div>
             </div>
 
-            <form className='upload__form' onSubmit={(handleSubmit, navigateHome)}>
+            <form className='upload__form' onSubmit={navigateHome}>
                 <div className='upload__desk'>
                 <p className='upload__content--name'>TITLE YOUR VIDEO</p>
                 <label>
