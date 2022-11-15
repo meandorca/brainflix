@@ -3,7 +3,9 @@ import eye from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
 
 function MainVideo({ video, timeConvert }) {
+  console.log(video)
   return (
+    video?
     <>
       <div className='mainVid'>
         <div className='mainVid__backg'>
@@ -29,11 +31,12 @@ function MainVideo({ video, timeConvert }) {
               </div>
             </div>
             <p className='mainVid__description'>{video.description}</p>
-            <p className='mainVid__comments'>{video.comments.length} Comments</p>
+            <p className='mainVid__comments'>{video.comments?.length} Comments</p>
           </div>
         </div>
       </div>
     </>
+    :'LOADING'
   )
 }
 

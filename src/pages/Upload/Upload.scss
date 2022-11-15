@@ -1,0 +1,89 @@
+.upload {
+    margin: 0 1.2rem;
+
+    &__title {
+        font-size: 2rem;
+        width: 20rem;
+        font-weight: 400;
+    }
+
+    &__content {
+        &--name {
+            color: #AFAFAF;
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin: 1.5rem 0 0.3rem 0;
+        }
+
+        &--img {
+            border-radius: 0.7rem;
+            width: -webkit-fill-available;
+        }
+    }
+
+    &__form {
+        margin: 1rem 1.2rem;
+    }
+
+    &__input {
+        width: -webkit-fill-available;
+        height: 2.8rem;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        padding-left: 1.2rem;
+        border: 2px solid #E1E1E1;
+        background-color: #FAFAFA;
+        display: flex;
+        position: relative;
+    }
+
+    &__description {
+        height: 6.5rem;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+
+        &--img {
+            height: 1.8rem;
+            padding-left: 1rem;
+            position: absolute;
+            left: 0.4rem;
+        }
+
+        &--item {
+            color: white;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            padding-top: 0.35rem;
+        }
+
+        &--item2 {
+            color: #0095FF;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            padding-top: 0.35rem;
+            margin-top: 1rem;
+        }
+
+        &--content {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 0;
+            padding: .9rem 0;
+            background-color: #0095FF;
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        &--detail {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+    }
+
+}
