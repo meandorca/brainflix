@@ -17,7 +17,7 @@ function Next({ video, setVideo, videoDetails }) {
       <div className="next">
         <p className='next__title'>NEXT VIDEOS</p>
         {videoDetails.map(displaySum =>
-        <NavLink to={'/'+displaySum.id}>
+        <NavLink  to={'/'+displaySum.id}>
           <div  className='next__content'>
             <img className='next__img' src={displaySum.image} />
             <div className='next__details'>
