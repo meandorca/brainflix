@@ -1,33 +1,27 @@
-import './Home.scss'
-import Upload from '../Upload/Upload'
-
-import Header from '../../components/Header/Header';
+import './Home.scss';
 import MainVideo from '../../components/MainVideo/MainVideo';
 import Conversation from '../../components/Conversation/Conversation';
 import Comments from '../../components/Comments/Comments';
 import Next from '../../components/Next/Next';
-import axios from 'axios'
-import videoDetails from '../../Data/video-details.json';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Home({video,setVideo}) {
 
-  const fetchVideo = () => {
-    axios.get('https://project-2-api.herokuapp.com/videos?api_key=bd2080cd-f855-4b68-9d24-d4f99e3c828d')
+  const [videoDetails, setVideoDetails] = useState([]);
+  const fetchAllVideo = async() => {
+    await axios.get(`http://localhost:8000/videos`)
     .then((response) => {
-      setVideo(response.data)
-      console.log(setVideo)
-    }
-    ) 
+      setVideoDetails(response.data)
+    })
   }
 
   useEffect(  () => {
-    fetchVideo () 
+    fetchAllVideo()
   },[])
 
-  const activeVideo = useParams().MainVideo||"84e96018-4022-434e-80bf-000ce4cd12b8"
-  
+  const activeVideo = useParams().MainVideo || videoDetails[0]?.id ; 
   if (activeVideo){
     let MatchVideo = videoDetails.find(ele => ele.id === activeVideo)
     setVideo (MatchVideo)

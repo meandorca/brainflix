@@ -7,8 +7,9 @@ import {NavLink} from 'react-router-dom'
 
 
 function Header() {
+
   return (
-    <>
+    
       <header className="header">
     <NavLink to="/" ><img className="header__img" src={logo} /></NavLink>
         <div className='header__info'>
@@ -26,7 +27,7 @@ function Header() {
         </div>
         <img className="header__circle--addon" src={circle} />
       </header>
-    </>
+
   )
 }
 

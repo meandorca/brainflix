@@ -4,7 +4,7 @@ import plus from '../../assets/Icons/add_comment.svg'
 
 function Conversation() {
   return (
-    <>
+    
       <div className='conversation'>
         <div className='conversation__content'>
           <form className='conversation__form'>
@@ -23,7 +23,7 @@ function Conversation() {
           </form>
         </div >
       </div >
-    </>
+  
   )
 }
 

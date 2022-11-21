@@ -1,19 +1,27 @@
 import './Next.scss'
 import { NavLink, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Next({ video, setVideo, videoDetails }) {
 
+  const [nextVideo, setNextVideo] = useState([]);
+  const fetchNextVideo = async () => {
+    await axios.get('http://localhost:8000/videos')
+      .then((response) => {
+        setNextVideo(response.data)
+      }
+      )
+  }
+  useEffect(() => {
+    fetchNextVideo()
+  }, [])
   
-  let videoid = useParams().MainVideo || videoDetails[0].id;
-  console.log(video)
-  const filterNext = videoDetails.filter(videoNext => videoNext.id != video.id)
-
-  
+   const filterNext = nextVideo.filter(videoNext => videoNext.id != video.id)
 
   return (
     video?
-    <>
+    
       <div className="next">
         <p className='next__title'>NEXT VIDEOS</p>
         {filterNext.map(displaySum =>
@@ -29,7 +37,7 @@ function Next({ video, setVideo, videoDetails }) {
         )
         }
       </div>
-    </>
+  
     :''
   )
 }
