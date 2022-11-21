@@ -3,11 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Upload from './pages/Upload/Upload'
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-import MainVideo from './components/MainVideo/MainVideo';
-import Conversation from './components/Conversation/Conversation';
-import Next from './components/Next/Next';
-import Comments from './components/Comments/Comments';
-import axios from 'axios'
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -18,16 +13,16 @@ function App() {
   }
 
   return (
-<BrowserRouter>
+    <BrowserRouter>
       <div className="app">
         <Header />
         <Routes>
-        <Route path="/" element={<Home video={video} setVideo={setVideo}/>}/>
-        <Route path="/:MainVideo" element={<Home video={video} setVideo={setVideo}/>}/>
-          <Route path="upload" element={<Upload/>}/>
-          </Routes>
+          <Route path="/" element={<Home video={video} setVideo={setVideo} />} />
+          <Route path="/:MainVideo" element={<Home video={video} setVideo={setVideo} />} />
+          <Route path="upload" element={<Upload />} />
+        </Routes>
       </div >
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

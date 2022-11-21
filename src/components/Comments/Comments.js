@@ -3,7 +3,7 @@ import './Comments.scss'
 function Comments({ video, timeConvert }) {
   return (
     video?
-    <>
+    
       <div className="comments">
         {video.comments?.map(displayComm =>
 
@@ -20,7 +20,6 @@ function Comments({ video, timeConvert }) {
         )
         }
       </div>
-    </>
     :''
   )
 }

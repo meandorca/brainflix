@@ -3,10 +3,9 @@ import eye from '../../assets/Icons/views.svg'
 import likes from '../../assets/Icons/likes.svg'
 
 function MainVideo({ video, timeConvert }) {
-  console.log(video)
+
   return (
-    video?
-    <>
+    video ?
       <div className='mainVid'>
         <div className='mainVid__backg'>
           <video className='mainVid__media' controls poster={video.image} />
@@ -35,8 +34,7 @@ function MainVideo({ video, timeConvert }) {
           </div>
         </div>
       </div>
-    </>
-    :'LOADING'
+      : 'LOADING'
   )
 }
 
